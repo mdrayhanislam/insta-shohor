@@ -27,7 +27,12 @@ const reportPost = (id) => {
 };
 
 const displayContent = (text) => {
-    return text.length < 30 ? 'text' : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
+  if(text.length > 30){
+    return text.length < 30 ? 'text' : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";;
+  }
+  else{
+    return text.length > 30 ? 'text' : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";;
+  }
 };
 
 const switchTab = (id) => {
@@ -52,7 +57,7 @@ const switchTab = (id) => {
 
 const createPost = (post) => {
     const image = post.image;
-    console.log(image)
+    console.log(post)
     const div = document.createElement( "article" );
     div.classList.add( "post" );
     div.innerHTML = `
@@ -76,11 +81,11 @@ const createPost = (post) => {
 
               <div class="post__content">
                 <div class="post__medias">
-                  <img
-                    class="post__media"
-                    src="${image}"
-                    alt="Post Content"
-                  />
+                <img
+                class="post__media"
+                src="${image}"
+                alt="Post Content"
+              />
                 </div>
               </div>
 
