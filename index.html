@@ -140,11 +140,17 @@ br
             <div class="accordion-item">
               <h2 class="accordion-header" id="flush-headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                  Accordion Item #3
+                    What's the difference between local storage and session storage?
                 </button>
               </h2>
               <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+                <div class="accordion-body">
+
+                    Suitable for maintaining the required non-sensitive data in client scripts between local storage and session storage pages (for example: preferences, scores in games). Data stored in local storage and session storage can be easily read or modified from within the client / browser so sensitive or security-related data should not be relied upon to be stored in the application.
+                    
+                    DOMStrings is a storage format that uses UTF-16 to encode data, using two bytes per character. Strings are automatically generated from integer keys just as they are for objects. The data stored in LocalStorage is specified for a document protocol. If the site is loaded via HTTP (e.g., http://example.com), then local storage provides a different object when loaded via HTTPS (e.g., https://abc.com).
+                    
+                    A unique page session is created when a document is loaded in the Browser tab. Page sessions are only valid for one tab at a time Pages are only saved when tabs or browsers are open; They do not survive after the page has been reloaded and restored. A new session is created each time a tab or window is opened; This is different from session cookies. Each tab / window opened with the same URL creates its own session storage. When you duplicate a tab, the session storage from the main tab is copied to the Duplicate tab. Closing a window / tab ends the session and clears the session storage objects. </div>
               </div>
             </div>
           </div>
